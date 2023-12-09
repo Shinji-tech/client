@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie';
 
 import{ ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 import ITChaticon from '../assets/it.png'
+import LogoutIcon from '../assets/logout.png'
 
 const SideBar = () => (
     <div className='channel-list__sidebar'>
@@ -12,13 +13,18 @@ const SideBar = () => (
                 <img src= {ITChaticon} alt="IT" width ="30" />
             </div>
         </div>
+        <div className='channel-list__sidebar__icon2'>
+            <div className='icon__inner'>
+                <img src={LogoutIcon} alt='Logout' width={30}></img>
+            </div>
+        </div>
     </div>
-)
+);
 
 const ChannelListContainer = () => {
   return (
     <div>
-        ChannelListContainer
+        <SideBar />
     </div>
   )
 }
